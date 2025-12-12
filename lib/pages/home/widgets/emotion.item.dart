@@ -14,7 +14,7 @@ class EmotionItem extends StatelessWidget {
           width: 60,
           height: 60,
           decoration: BoxDecoration(
-            color: Colors.white60,
+            color: Colors.white30,
             borderRadius: BorderRadius.circular(10),
           ),
           alignment: Alignment.center,
