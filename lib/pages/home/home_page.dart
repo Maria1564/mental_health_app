@@ -9,6 +9,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue.shade700,
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey.shade400,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.markunread_sharp),
+            label: "messages",
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.people), label: "contacts"),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -131,7 +144,7 @@ class _BottomSheet extends StatelessWidget {
         ),
         width: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          padding: const EdgeInsets.only(top: 20, left: 30, right: 30),
           child: Column(
             children: [_TitleSheet(), SizedBox(height: 20), _List()],
           ),
